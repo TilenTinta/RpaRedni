@@ -1,0 +1,44 @@
+﻿<h2>TestRazor</h2>
+<h3>@DateTime.Now.ToLongDateString()</h3>
+@{ 
+    var datum = DateTime.Now.ToShortDateString();
+    var sporočilo = "Pozdravljen MVC";
+
+}
+<h2>Danes je :@datum<h2><br/>
+    <h2>@sporočilo</h2
+
+@*tekst med kodo*@
+
+@{ 
+    var datum1 = DateTime.Now.ToShortDateString();
+    var sporočilo1 = "Pozdravljen MVC";
+    <text>Danes je </text> @datum <br/>
+    @sporočilo
+
+}
+    <br/>
+    @if (DateTime.IsLeapYear(DateTime.Now.Year))
+    {
+        @DateTime.Now.Year <text> je prestopno leto </text> 
+    }
+    else
+    {
+        @DateTime.Now.Year <text> ni prestopno leto </text>
+    }
+    <br/>
+    @for (int k = 0; k < 5; k++)
+    {
+        @k.ToString() <br/>
+    }
+    }
+    @model MVC_Student.Models.Student
+        <h2>Podrobnosti študenta</h2>
+    <ul>
+        <li>Študent id: @Model.StudentId</li>
+        <li>Ime       : @Model.StudentName</li>
+        <li>Leta      : @Model.Age</li>
+    </ul>
+    <p>
+    @Html.ActionLink("Klikni me","Index")
+    </p>
