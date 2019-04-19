@@ -9,11 +9,9 @@ namespace MVC_Student.Controllers
 {
     public class StudentController : Controller
     {
-        // GET: Student
-        public ActionResult Index()
+
+        List<Student> seznam = new List<Student>()
         {
-            var seznam = new List<Student>()
-            {
                 new Student(){StudentId=1,StudentName="John",Age=18},
                 new Student(){StudentId=2,StudentName="Steve",Age=19},
                 new Student(){StudentId=3,StudentName="Bill",Age=20},
@@ -22,7 +20,10 @@ namespace MVC_Student.Controllers
                 new Student(){StudentId=6,StudentName="Kriss",Age=19},
                 new Student(){StudentId=7,StudentName="Bob",Age=21},
                 new Student(){StudentId=8,StudentName="Angel",Age=21}
-            };
+        };
+        // GET: Student
+        public ActionResult Index()
+        {
             return View(seznam);
         }
         public ActionResult TestRedni()
@@ -30,6 +31,25 @@ namespace MVC_Student.Controllers
             Student x = new Student()
             { StudentId = 9, StudentName = "Miha", Age = 22 };
             return View(x);
+        }
+        public ActionResult Edit(int id)
+        {
+            var std = (from a in seznam
+                      where a.StudentId == id
+                      select a).FirstOrDefault();
+            return View(std);
+        }
+        [HttpPost]
+        public ActionResult Edit(Student std)
+        {
+
+            if (ModelState.IsValid)
+            {
+                Student a = std;
+                // zapiši spremembe v bazo
+                return RedirectToAction("Index");
+            }
+            return View(std);
         }
     }
 }
