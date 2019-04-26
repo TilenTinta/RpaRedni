@@ -26,19 +26,5 @@ namespace Seminarska_prva.Controllers
 
             return View();
         }
-        public ActionResult Product()
-        {
-            string apiUri = Url.HttpRouteUrl("Produkti",
-                new { controller = "Product" });
-            ViewBag.ApiUri = new Uri(Request.Url, apiUri).AbsoluteUri.ToString();
-            return View();
-        }
-        public ActionResult ProductWebApi()
-        {
-            string apiUri = Url.HttpRouteUrl("ProductsWebApi",
-                new { controller = "ProductsWebApi" });
-            ViewBag.ApiUri = new Uri(Request.Url, apiUri).AbsoluteUri.ToString();
-            return View();
-        }
     }
 }
