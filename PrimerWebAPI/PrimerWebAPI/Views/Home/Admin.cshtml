@@ -1,0 +1,37 @@
+﻿@model PrimerWebAPI.Models.Product
+
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Admin</h2>
+<div class="content">
+    <div class="float-left">
+        <ul id="update-products" data-bind="foreach:products">
+            <li>
+                <div> <div class="item">Id Produkta</div><span data-bind="text:$data.Id"></span></div>
+                <div> <div class="item">Ime</div><input type="text" data-bind="value:$data.Name" /></div>
+                <div> <div class="item">Cena</div><input type="text" data-bind="value:$data.Price" /></div>
+                <div> <div class="item">Strošek</div><input type="text" data-bind="value:$data.ActualCost"/></div>
+                <div>
+                    <input type="button" value="Posodobi" />
+                    <input type="button" value="Briši" />
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/knockout-3.5.0.js"></script>
+<script type="text/javascript">
+    function ProductsViewModel()
+    {
+        var self = this;
+        self.products = ko.observableArray();
+        var baseUri = '@ViewBag.ApiUri';
+        $.getJSON(baseUri, self.products);
+    }
+    $(document).ready(function () {
+        ko.applyBindings(new ProductsViewModel())
+    });
+</script>
