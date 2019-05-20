@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="Navigacija.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Navigacija"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Name="btnHome" Content="Home" Margin="0,0,20,0" Click="btnHome_Click"/>
+                <Button Name="btnBack" Content="Back" Margin="0,0,20,0" Click="BtnBack_Click" />
+                <Button Name="btnNext" Content="Next" Margin="0,0,20,0" Click="BtnNext_Click"/>
+                <Button Name="btnRoot" Content="Root frame" Margin="0,0,20,0" Click="BtnRoot_Click"/>
+            </StackPanel>
+        <Frame Name="myFrame"/>
+    </StackPanel>
+</Page>

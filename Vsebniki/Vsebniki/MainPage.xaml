@@ -21,28 +21,18 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
-
         </Grid.RowDefinitions>
-
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="10,10,0,0"  Text="ACME Sales Corp" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="350" RenderTransformOrigin="0.547,1.765"  />
-
         <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" Margin="10,60,0,0" Text="First name:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="123" />
-
         <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Margin="4,64,0,0" Text="Last name:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="26" Width="118"/>
-
         <TextBlock Grid.Column="0" Grid.Row="3" HorizontalAlignment="Left" Margin="10,87,0,0" Text="Email:" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="80"/>
-
         <Button Grid.Column="1" Grid.Row="4" Content="Save" FontSize="10" HorizontalAlignment="Left" Margin="20,31,0,0" VerticalAlignment="Top" Height="26" Width="49" RenderTransformOrigin="0.5,0.462"/>
-
         <TextBox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" Margin="20,49,0,0" Text="................" VerticalAlignment="Top" Height="36" Width="188"/>
-
         <TextBox Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Margin="20,64,0,0" Text="................" VerticalAlignment="Top" Height="36" Width="188"/>
-
         <TextBox Grid.Column="1" Grid.Row="3" HorizontalAlignment="Left" Margin="20,80,0,0" Text="................" VerticalAlignment="Top" Height="37" Width="188"/>-->
 
         <!--VAJA 2-->
-
-        <StackPanel Orientation="Vertical">
+        <!--<StackPanel Orientation="Vertical">
             <TextBlock FontSize="48">Lorem Ipsum</TextBlock>
             <StackPanel Name="vsebina" Orientation="Horizontal">
                 <TextBlock Width="250" TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</TextBlock>
@@ -55,8 +45,52 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
+        </StackPanel>-->
+        
+        <!--VAJA 3-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0"  Text="Title 1" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="350" RenderTransformOrigin="0.547,1.765"  />
+        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <Rectangle Fill="Green" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Red" Width="100" Height="30"/>
+            </StackPanel>
         </StackPanel>
-
+        
+        <TextBlock Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0"  Text="Title 2" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="350" RenderTransformOrigin="0.547,1.765"  />
+        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="1">
+            <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <Rectangle Fill="Red" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Blue" Width="100" Height="30"/>
+            </StackPanel>
+        </StackPanel>
+        
+        <TextBlock Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0"  Text="Title 3" FontSize="30" TextWrapping="Wrap" VerticalAlignment="Top" Height="37" Width="350" RenderTransformOrigin="0.547,1.765"  />
+        <StackPanel Orientation="Vertical" Grid.Row="5" Grid.Column="1">
+            <TextBlock  HorizontalAlignment="Left" TextWrapping="Wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</TextBlock>
+            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1">
+                <Rectangle Fill="Blue" Width="100" Height="30"/>
+                <Rectangle Fill="Black" Width="100" Height="30"/>
+                <Rectangle Fill="Yellow" Width="100" Height="30"/>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Page>

@@ -1,0 +1,47 @@
+﻿<Page
+    x:Class="Vsebniki2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Vsebniki2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <RelativePanel Grid.Row="1" MinHeight="300">
+            <Rectangle Name="rdeči" Fill="Red" Width="100" Height="100" RelativePanel.AlignRightWithPanel="True"/>
+            <Rectangle Name="modri" Fill="Blue" Width="50" Height="50" RelativePanel.LeftOf="rdeči"/>
+            <Rectangle Name="zeleni" Fill="Green" Width="50" Height="50" RelativePanel.AlignHorizontalCenterWith="rdeči" RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        </RelativePanel>
+        <RelativePanel>
+            <Button Name="btnIšči" Content="Išči" RelativePanel.AlignRightWithPanel="True"/>
+            <TextBox Name="txtIšči" RelativePanel.LeftOf="btnIšči" Width="100" Margin="0,0,10,10"/>
+            <TextBlock Name="tbIšči" Text="Išči:" FontSize="20" RelativePanel.LeftOf="txtIšči" SelectionChanged="TbIšči_SelectionChanged"/>
+        </RelativePanel>-->
+        <SplitView Name="mojSplitView" CompactPaneLength="10" OpenPaneLength="50" DisplayMode="CompactInline">
+        </SplitView>
+        <SplitView>
+            <StackPanel>
+                <TextBlock Text="First"/>
+                <TextBlock Text="Scond"/>
+                <TextBlock Text="Third"/>
+            </StackPanel>
+        </SplitView>
+        <SplitView>
+            <SplitView.Content>
+                <StackPanel>
+                    <TextBlock Text="četrti"/>
+                    <TextBlock Text="peti"/>
+                    <TextBlock Text="šesti"/>
+                </StackPanel>
+            </SplitView.Content>
+        </SplitView>
+        <Button Content="Klikni me!" Click="Button_Click"></Button>
+    </Grid>
+</Page>
