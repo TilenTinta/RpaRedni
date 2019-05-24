@@ -9,6 +9,56 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid Background=" #3C1F19">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="400" Margin="20,50,0,0" Source="/Assets/white-logo.png" />
+           
+            <Button Grid.Row="3" Grid.Column="1" Content="Roast"  HorizontalAlignment="Right">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem Text="Brez"/>
+                        <MenuFlyoutItem Text="Črna"/>
+                        <MenuFlyoutItem Text="Srednja"/>
+                        <MenuFlyoutSeparator />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+
+            <Button Grid.Row="3" Grid.Column="2" Content="Sweetener"  HorizontalAlignment="center" >
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem Text="Brez"/>
+                        <MenuFlyoutItem Text="Sladkor"/>
+                        <MenuFlyoutSeparator />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+
+            <Button Grid.Row="3" Grid.Column="3" Content="Dodatki"  HorizontalAlignment="left">
+                <Button.Flyout>
+                    <MenuFlyout Placement="Bottom">
+                        <MenuFlyoutItem Text="Brez"/>
+                        <MenuFlyoutItem Text="1,5 % mleko"/>
+                        <MenuFlyoutItem Text="Mleko"/>
+                        <MenuFlyoutSeparator />
+                    </MenuFlyout>
+                </Button.Flyout>
+            </Button>
+            <TextBlock Grid.Column="0" Grid.Row="4" Text="Coffee:" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,20,0,0" FontSize="20"/>
+        </Grid>
 
     </Grid>
 </Page>

@@ -9,6 +9,26 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid Background="Red">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="400" Margin="20,50,0,0" Source="/Assets/white-logo.png" />
+           
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Original glazed count" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,20,0,0" FontSize="25"/>
+            <Slider Grid.Row="2" Grid.Column="1" Name="sld" Margin="0,30,0,0" Maximum="100" Minimum="0" Width="300" HorizontalAlignment="Left"/>
 
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Speedway Special Count" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100,80,0,0" FontSize="25"/>
+            <Slider Grid.Row="3" Grid.Column="1" Name="sld2" Margin="0,90,0,0" Maximum="100" Minimum="0" Width="300" HorizontalAlignment="Left"/>
+
+        </Grid>
     </Grid>
 </Page>

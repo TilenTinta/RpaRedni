@@ -9,6 +9,24 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" HorizontalAlignment="Left" Height="140" VerticalAlignment="Top" Width="400" Margin="20,50,0,0" Source="/Assets/color-logo.png" />
 
+            <Image Grid.Column="1" Grid.Row="2"  Grid.ColumnSpan="2" HorizontalAlignment="Center" Height="600" VerticalAlignment="Top" Width="400" Margin="10,50,0,0" Source="/Assets/ticket.jpg" />
+            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="Order" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,180,0,0" FontSize="60" Foreground="Black"/>
+            <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Text="96" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,250,0,0" FontSize="60" Foreground="Black"/>
+
+        </Grid>
     </Grid>
 </Page>

@@ -25,6 +25,27 @@ namespace GoNuts
         public MainPage()
         {
             this.InitializeComponent();
+            mojOkvir.Navigate(typeof(Page1));
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            mojOkvir.Navigate(typeof(Page1));
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            mojOkvir.Navigate(typeof(Page2));
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            mojOkvir.Navigate(typeof(Page3));
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            mojOkvir.Navigate(typeof(Page4));
         }
     }
 }

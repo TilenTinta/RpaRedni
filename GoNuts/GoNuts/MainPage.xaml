@@ -35,28 +35,28 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
         
-        <Button Grid.Column="0" Style="{StaticResource NavigacijskiGumbi}">
+        <Button Grid.Column="0" Style="{StaticResource NavigacijskiGumbi}" Click="Button_Click">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Assets/donut-icon.png" Style="{StaticResource Ikona}"/>
-                <TextBlock Text="Krofi" Foreground="White"/>
-            </StackPanel>
+                    <TextBlock Text="Krofi" Foreground="White"/>
+                </StackPanel>
         </Button>
         
-        <Button Grid.Column="1" Style="{StaticResource NavigacijskiGumbi}">
+        <Button Grid.Column="1" Style="{StaticResource NavigacijskiGumbi}" Click="Button_Click_1">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Assets/coffee-icon.png" Style="{StaticResource Ikona}"/>
                 <TextBlock Text="Kava" Foreground="White"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="2" Style="{StaticResource NavigacijskiGumbi}">
+        <Button Grid.Column="2" Style="{StaticResource NavigacijskiGumbi}" Click="Button_Click_2">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Assets/schedule-icon.png" Style="{StaticResource Ikona}"/>
                 <TextBlock Text="Urnik" Foreground="White"/>
             </StackPanel>
         </Button>
 
-        <Button Grid.Column="3" Style="{StaticResource NavigacijskiGumbi}">
+        <Button Grid.Column="3" Style="{StaticResource NavigacijskiGumbi}" Click="Button_Click_3">
             <StackPanel Orientation="Horizontal">
                 <Image Source="Assets/complete-icon.png" Style="{StaticResource Ikona}"/>
                 <TextBlock Text="Končaj" Foreground="White"/>
