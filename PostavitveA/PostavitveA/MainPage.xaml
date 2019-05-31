@@ -1,0 +1,67 @@
+﻿<Page
+    x:Class="PostavitveA.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PostavitveA"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="vsg">
+                <VisualState x:Name="ozko">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="10"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Prvi.(Grid.ColumnSpam)" Value="3"/>
+                        <Setter Target="Drugi.(Grid.ColumnSpam)" Value="3"/>
+                        <Setter Target="Tretji.(Grid.ColumnSpam)" Value="3"/>
+                        <Setter Target="Prvi.(Grid.Row)" Value="0"/>
+                        <Setter Target="Drugi.(Grid.Row)" Value="1"/>
+                        <Setter Target="Tretji.(Grid.Row)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="Široko">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Prvi.(Grid.RowSpam)" Value="3"/>
+                        <Setter Target="Drugi.(Grid.RowSpam)" Value="3"/>
+                        <Setter Target="Tretji.(Grid.RowSpam)" Value="3"/>
+                        <Setter Target="Prvi.(Grid.Column)" Value="0"/>
+                        <Setter Target="Drugi.(Grid.Column)" Value="1"/>
+                        <Setter Target="Tretji.(Grid.Column)" Value="2"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <ScrollViewer>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <StackPanel Name="Prvi" Margin="20,20,0,0">
+            <Image Source="Assets/tibbles.jpg" HorizontalAlignment="left"/>
+            <TextBlock>Nekaj informaciji o mačku Muriju</TextBlock>
+        </StackPanel>
+        <StackPanel Name="Drugi" Margin="20,20,0,0">
+            <TextBlock TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus, mi nec fermentum congue, turpis nibh porttitor ex, sed commodo neque eros non libero. Donec mauris felis, malesuada nec consectetur et, pharetra in ante. Praesent nec hendrerit purus. Ut vel nunc id nisl volutpat porta. Cras in convallis ipsum. Integer id sollicitudin ex. Ut sed iaculis nisl."/>
+        </StackPanel>
+        <StackPanel Name="Tretji" Margin="20,20,0,0">
+            <TextBlock TextWrapping="Wrap" Text="Vestibulum sit amet neque nec eros interdum laoreet nec vitae justo. Maecenas scelerisque finibus nisl, a iaculis mauris fermentum sed. Pellentesque faucibus, turpis quis ultrices facilisis, metus eros vulputate augue, sit amet sodales nisl lacus ut massa. Pellentesque vitae dolor nulla. Nullam ultricies imperdiet nisl, interdum placerat dolor posuere a. Nunc tempor sed sapien nec dictum. Morbi eleifend tellus vitae nunc tincidunt viverra. Duis vitae justo eget purus bibendum dictum quis feugiat turpis. Curabitur ultrices purus ut ipsum ullamcorper, sit amet faucibus nisl commodo. Nulla aliquet ante eu leo tincidunt, a tempor nibh maximus."/>
+        </StackPanel>
+        
+    </Grid>
+    </ScrollViewer>
+    </Grid>
+</Page>
