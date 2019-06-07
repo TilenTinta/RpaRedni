@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +23,31 @@ namespace Zaposleni
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        List<icon> Icons;
+        ObservableCollection<Contact> Zaposleni;
         public MainPage()
         {
             this.InitializeComponent();
+            Icons = new List<icon>();
+            Icons.Add(new icon { IconPath = "Assets/male-01.png" });
+            Icons.Add(new icon { IconPath = "Assets/male-02.png" });
+            Icons.Add(new icon { IconPath = "Assets/male-03.png" });
+            Icons.Add(new icon { IconPath = "Assets/female-01.png" });
+            Icons.Add(new icon { IconPath = "Assets/female-02.png" });
+            Icons.Add(new icon { IconPath = "Assets/female-03.png" });
+            Zaposleni = new ObservableCollection<Contact>();
+
+        }
+
+      
+
+        private void BtnDodaj_Click(object sender, RoutedEventArgs e)
+        {
+            Contact a = new Contact();
+            a.Ime = txtIme.Text;
+            a.Priimek = txtPriimek.Text;
+            a.AvatarPath = ((icon)(cboAvatar.SelectedValue)).IconPath;
+            Zaposleni.Add(a);
         }
     }
 }
