@@ -38,5 +38,15 @@ namespace Psi
             mojPR.IsActive = false;
             mojPR.Visibility = Visibility.Collapsed;
         }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(stran1));
+        }
+
+        private void HyperlinkButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(stran2));
+        }
     }
 }

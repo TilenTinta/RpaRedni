@@ -124,6 +124,21 @@
     </Compile>
     <Compile Include="podatki.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stran1.xaml.cs">
+      <DependentUpon>stran1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="stran2.xaml.cs">
+      <DependentUpon>stran2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="stran3.xaml.cs">
+      <DependentUpon>stran3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="stran4.xaml.cs">
+      <DependentUpon>stran4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="stran5.xaml.cs">
+      <DependentUpon>stran5.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -150,6 +165,26 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="stran1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="stran2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="stran3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="stran4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="stran5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

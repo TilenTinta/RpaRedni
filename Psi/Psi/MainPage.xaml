@@ -10,11 +10,13 @@
     Loaded="Page_Loaded">
 
     <Grid>
-        <GridView Name="glavniView" ItemsSource="{x:Bind vsiPsi}">
+        <GridView Name="Viwe" ItemsSource="{x:Bind vsiPsi}">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="local:Slika">
                     <StackPanel Orientation="Horizontal" Margin="20">
-                        <TextBlock TextWrapping="Wrap" Text="{x:Bind Pot}"/>
+                        <HyperlinkButton Content="Podatki" FontSize="30" Click="HyperlinkButton_Click"/>
+                        <Image Source="{x:Bind Pot}" Width="300" Height="200" Stretch="UniformToFill"/>
+                        <HyperlinkButton Content="Podatki" FontSize="30" Click="HyperlinkButton_Click_1"/>
                         <Image Source="{x:Bind Pot}" Width="300" Height="200" Stretch="UniformToFill"/>
                     </StackPanel>
                 </DataTemplate>

@@ -22,7 +22,7 @@ namespace Psi
     {
         public static async Task NapolniPsi(ObservableCollection<Slika> poti)
         {
-            string url = "https://dog.ceo/api/breed/bullterrier/staffordshire/images";
+            string url = "https://dog.ceo/api/breed/terrier/tibetan/images";
             Podatki p = new Podatki();
             using (var klient = new HttpClient())
             {
@@ -35,8 +35,8 @@ namespace Psi
                 Slika s = new Slika();
                 s.Pot = x;
                 poti.Add(s);
-                //k++;
-                //if (k > 5) break;
+                k++;
+                if (k > 0) break;
             }
         }
     }
